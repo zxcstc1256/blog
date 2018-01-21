@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.zhouxuchen.engineer">
-  <title>Hello World | 程序周博客</title>
+  <title>使用 brew 安装jEnv，实现动态切换 Java 版本 | 程序周博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="深圳瑞麦科技有限公司，Java工程师。">
+  <meta name="description" content="安装 brew  参考brew 官网  安装 jEnv  参考jEnv官网  配置 jEnv  主要说明一下，官网中的 Install 中，以下是不需要的1$ echo &apos;export PATH=&quot;$HOME/.jenv/bin:$PATH&quot;&apos; &amp;gt;&amp;gt; ">
 <meta name="keywords" content="java,spring,spring-boot,spring-cloud,mybatis,mysql,redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://www.zhouxuchen.engineer/2017/11/19/Hello-World-0/index.html">
+<meta property="og:title" content="使用 brew 安装jEnv，实现动态切换 Java 版本">
+<meta property="og:url" content="http://www.zhouxuchen.engineer/2017/12/31/使用brew安装jEnv，实现动态切换Java版本/index.html">
 <meta property="og:site_name" content="程序周博客">
-<meta property="og:description" content="深圳瑞麦科技有限公司，Java工程师。">
-<meta property="og:updated_time" content="2017-11-19T04:24:24.000Z">
+<meta property="og:description" content="安装 brew  参考brew 官网  安装 jEnv  参考jEnv官网  配置 jEnv  主要说明一下，官网中的 Install 中，以下是不需要的1$ echo &apos;export PATH=&quot;$HOME/.jenv/bin:$PATH&quot;&apos; &amp;gt;&amp;gt; ~/.bash_profile 关注下面这句1$ echo &apos;eval &quot;$(jenv init -)&quot;&apos; &amp;gt;&amp;gt; ~/.b">
+<meta property="og:updated_time" content="2018-01-21T11:55:52.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="深圳瑞麦科技有限公司，Java工程师。">
+<meta name="twitter:title" content="使用 brew 安装jEnv，实现动态切换 Java 版本">
+<meta name="twitter:description" content="安装 brew  参考brew 官网  安装 jEnv  参考jEnv官网  配置 jEnv  主要说明一下，官网中的 Install 中，以下是不需要的1$ echo &apos;export PATH=&quot;$HOME/.jenv/bin:$PATH&quot;&apos; &amp;gt;&amp;gt; ~/.bash_profile 关注下面这句1$ echo &apos;eval &quot;$(jenv init -)&quot;&apos; &amp;gt;&amp;gt; ~/.b">
   
     <link rel="alternative" href="/atom.xml" title="程序周博客" type="application/atom+xml">
   
@@ -158,27 +158,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hello-World-0" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用brew安装jEnv，实现动态切换Java版本" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      使用 brew 安装jEnv，实现动态切换 Java 版本
     </h1>
   
 
         
-        <a href="/2017/11/19/Hello-World-0/" class="archive-article-date">
-  	<time datetime="2017-11-19T04:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+        <a href="/2017/12/31/使用brew安装jEnv，实现动态切换Java版本/" class="archive-article-date">
+  	<time datetime="2017-12-31T04:11:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li><strong>安装 brew</strong></li>
+</ul>
+<p>参考<a href="https://brew.sh" target="_blank" rel="noopener">brew 官网</a></p>
+<ul>
+<li><strong>安装 jEnv</strong></li>
+</ul>
+<p>参考<a href="http://www.jenv.be" target="_blank" rel="noopener">jEnv官网</a></p>
+<ul>
+<li><strong>配置 jEnv</strong></li>
+</ul>
+<p>主要说明一下，官网中的 Install 中，以下是不需要的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'export PATH="$HOME/.jenv/bin:$PATH"'</span> &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>关注下面这句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'eval "$(jenv init -)"'</span> &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>这是配置每次都初始化，其实就是创建文件夹</p>
+<ul>
+<li><strong>配置</strong></li>
+</ul>
+<p>添加受 jEnv 托管的jdk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenv add /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/</span><br></pre></td></tr></table></figure></p>
+<p>以上路径为 jdk 路径，可以通过以下命令查看当前已经安装的jdk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /Library/Java/JavaVirtualMachines</span><br></pre></td></tr></table></figure></p>
+<p>注意：如果不手动添加 jdk 是不会被 jEnv 识别的，并且注意通过<code>brew cask upgrade</code>更新 jdk 后，<code>java -version</code>可能会出现以下错误：</p>
+<blockquote>
+<p>jenv: version `1.8.0.152’ is not installed</p>
+</blockquote>
+<p>输入<code>jenv versions</code>也会提示以下错误：</p>
+<blockquote>
+<p>jenv: version `1.8.0.152’ is not installed<br>    system</p>
+</blockquote>
+<p>这是因为之前设置过<code>global</code>版本，需要手动清理，输入以下命令清空<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~/.jenv/version</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>使用</strong></li>
+</ul>
+<p>上一节中如果已经成功添加了jdk，输入以下命令可以看到已经被 jEnv 托管的jdk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenv versions</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* system (set by /Users/xxx/.jenv/version)</span><br><span class="line">  1.8.0.162</span><br><span class="line">  9.0.4</span><br><span class="line">  oracle64-1.8.0.162</span><br><span class="line">  oracle64-9.0.4</span><br></pre></td></tr></table></figure></p>
+<p>以上 1.8.0.162 其实就是 oracle64-1.8.0.162，只是简称。<br>jEnv的版本管理有三种模式：<code>global</code>,<code>local</code>,<code>shell</code></p>
+<blockquote>
+<p>global 全局环境</p>
+</blockquote>
+<p>顾名思义就是设置系统 jdk 默认版本，不管在任何地方，只要没有特殊指定，运行 java 都采用该版本，通过以下命令设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenv global 1.8.0.162</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>local 本地(当前目录)环境</p>
+</blockquote>
+<p>针对特定目录设置 jdk 版本，优先级大于<code>global</code>，当指定了当前目录的<code>local</code>版本，该目录则以<code>local</code>版本为准，忽略<code>global</code>版本，通过以下命令设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenv <span class="built_in">local</span> 1.8.0.162</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>shell 会话环境</p>
+</blockquote>
+<p>针对当前窗口有效，最高优先级，大于<code>global</code>和<code>local</code>，只针对本次会话有效，关闭窗口则销毁设置，通过以下命令设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jenv shell 1.8.0.162</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -257,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.zhouxuchen.engineer/2017/11/19/Hello-World-0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.zhouxuchen.engineer/2017/12/31/使用brew安装jEnv，实现动态切换Java版本/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,8 +319,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/11/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/11/25/使用Spring-Cloud-Config搭建服务器配置管理中心/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Spring Cloud Config搭建服务器配置管理中心</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -316,7 +363,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 zxc
+    		&copy; 2018 zxc
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
